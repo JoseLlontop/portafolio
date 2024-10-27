@@ -1,0 +1,191 @@
+* {
+    margin: 0;
+    padding: 0;
+    /*Si establesco el tañano de los div tambien se considere su padding:*/
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+   }
+  
+   /*body: abarca todos los elementos HTML*/
+  body {
+    background: #fff;
+    font-family: "Open Sans", sans-serif;
+    font-size: 16px; }
+  
+  /*Este se encuentra en cada parte de la pagina*/
+  .contenedor {
+    /*Dejo margenes implicitos, van a ser de 10%*/
+    width: 90%;
+    /*Tamaño del div*/
+    max-width: 1000px;
+    /*Centrar el contenedor*/
+    margin: auto;
+    /*El contenido que se salga del área visible del contenedor será ocultado, es decir, no se mostrará fuera de los límites del contenedor*/
+    overflow: hidden; }
+  
+  /*------------- HEADER ----------*/
+  header {
+    background: url("../img/bg.jpg") #49a3d6;
+    /*Aseguridad que el fondo no se repita*/
+    background-repeat: no-repeat;
+    background-position: center;
+    /*Establecemos el alto maiximo*/
+    max-height: 500px; 
+    height: 250px;
+  }
+  
+  header .menu {
+    /*Margen exterior entre los otros objetos HTML*/
+    margin: 40px 0;
+    text-align: right; 
+  }
+  
+  
+  header .menu a {
+    /*Margen exterior entre los otros objetos HTML (arriba-abajo derecha-izquierda)*/
+    margin: 0 20px;
+    color: #fff;
+    /*Recordatorio:display: 
+    block= abarcan el 100% de longitud como el div
+    inline= abarca solo el espacio necesario*/
+    /*Quito que los enlaces abarquen el 100% para que esten uno al lado del otro*/
+    display: inline-block;
+    padding-bottom: 9px;
+    /*em = tamaño de su contenedor, en este caso el body (16px)*/
+    font-size: 1em;
+    text-decoration: none;
+    /*Evita que se agrande el header al pasarle el maus*/
+    border-bottom: 2px solid transparent; 
+  }
+  
+  
+  header .menu a:hover {
+    border-bottom: 2px solid #fff; 
+  }
+  
+  
+  /* ----- ----- MAIN ----- ----- */
+  
+  .main .contenedor {
+    /*Sobreescribo la propiedad de hidden general*/
+    overflow: visible;
+  }
+  
+  .main .informacion-aplicacion .texto .titulo {
+    font-size: 34px;
+    margin-bottom: 40px;
+    margin-top: 50px;
+    line-height: 34px;
+    font-weight: 350;
+    color: #dd820d;
+    text-align: center;
+  }
+
+  .main .informacion-aplicacion .texto {
+    color: #5a5a5a;
+    font-weight: 600;
+    font-size: 1.1em;
+    line-height: 30px;
+    width: 100%;
+    margin: 40px auto 30px auto;
+  }
+
+  .main .informacion-aplicacion .texto .descripcion-app {
+    padding-bottom: 20px;
+  }
+  
+  
+  .main .informacion-aplicacion .texto ol {
+    text-align: left; /* Alinear la lista a la izquierda */
+    padding-left: 20px; /* Margen para la enumeración */
+  }
+  
+  .main .informacion-aplicacion .texto ol li {
+    margin-bottom: 10px;
+  }
+  
+  /* ------ ---- TRABAJOS ---------*/
+  
+  .main .trabajos {
+    background: #f2f2f2;
+    padding: 60px 0; 
+  }
+  
+  .main .trabajos .contenedor {
+    overflow: hidden; 
+  }
+  
+  .main .trabajos .segunda-seccion {
+    margin-top: 30px;
+  }
+  
+  
+  /* ----- ----- Galería de imágenes de la aplicación móvil ----- ----- */
+  
+  .main .galeria-app {
+    background-color: #f2f2f2;
+    padding: 60px 0;
+  }
+  
+  .main .galeria-app .contenedor {
+    text-align: center;
+  }
+  
+  .main .galeria-app .galeria {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  .main .galeria-app .galeria img {
+    width: 30%;
+    border-radius: 8px;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .main .galeria-app .galeria img:hover {
+    transform: scale(1.05);
+  }
+  
+  
+  /* ----- ----- FOOTER ----- ----- */
+  footer .redes-sociales {
+    background: #1e2b38;
+    padding: 60px 0; 
+  }
+  
+  footer .redes-sociales .contenedor {
+    /*Habilito flexbox, donde ahora los elementos hijos son "flexibles(especie de float)"*/
+    display: flex;
+    /*Centrar los contendedores hijos de manera horizontal*/
+    justify-content: center; 
+  }
+  
+  footer .redes-sociales .contenedor a {
+    color: #fff;
+    text-align: center;
+    width: 100px;
+    /*Los iconos son una FUENTE, cambio su tamaño con font-size*/
+    font-size: 30px;
+    /*Margen interno entre icono y el recuadro*/
+    padding: 15px 0;
+    /*Transformo los imput de tipo inline a block(100%) para que este uno abajo del otro*/
+    /*Pero con flexbox lo arreglo*/
+    display: block;
+    /*Margen exterior con los otros enlaces*/
+    margin: 0 20px;
+    border-radius: 3px; 
+  }
+  
+  footer .redes-sociales .contenedor .facebook:hover {
+    background: #3b5998; }
+  
+  footer .redes-sociales .contenedor .github:hover {
+    background: #666666; }
+  
+  footer .redes-sociales .contenedor .linkedin:hover {
+    background: #0077B5; }
+  
+  

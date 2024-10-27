@@ -1,0 +1,356 @@
+* {
+  margin: 0;
+  padding: 0;
+  /*Si establesco el tañano de los div tambien se considere su padding:*/
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+ }
+
+ /*body: abarca todos los elementos HTML*/
+body {
+  background: #fff;
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px; }
+
+/*Este se encuentra en cada parte de la pagina*/
+.contenedor {
+  /*Dejo margenes implicitos, van a ser de 10%*/
+  width: 90%;
+  /*Tamaño del div*/
+  max-width: 1000px;
+  /*Centrar el contenedor*/
+  margin: auto;
+  /*El contenido que se salga del área visible del contenedor será ocultado, es decir, no se mostrará fuera de los límites del contenedor*/
+  overflow: hidden; }
+
+/*------------- HEADER ----------*/
+
+header {
+  background: url("../img/bg.jpg") #49a3d6;
+  /*Aseguridad que el fondo no se repita*/
+  background-repeat: no-repeat;
+  background-position: center;
+  /*Establecemos el alto maiximo*/
+  max-height: 500px; 
+}
+
+header .menu {
+  /*Margen exterior entre los otros objetos HTML*/
+  margin: 40px 0;
+  text-align: right; 
+}
+
+
+header .menu a {
+  /*Margen exterior entre los otros objetos HTML (arriba-abajo derecha-izquierda)*/
+  margin: 0 20px;
+  color: #fff;
+  /*Recordatorio:display: 
+  block= abarcan el 100% de longitud como el div
+  inline= abarca solo el espacio necesario*/
+  /*Quito que los enlaces abarquen el 100% para que esten uno al lado del otro*/
+  display: inline-block;
+  padding-bottom: 9px;
+  /*em = tamaño de su contenedor, en este caso el body (16px)*/
+  font-size: 1em;
+  text-decoration: none;
+  /*Evita que se agrande el header al pasarle el maus*/
+  border-bottom: 2px solid transparent; 
+}
+
+
+header .menu a:hover {
+  border-bottom: 2px solid #fff; 
+}
+
+header .texto-perfil {
+  /*Habilito flexbox, donde ahora los elementos hijos son "flexibles(especie de float)"*/
+  /*ME AHORRA HACER CALCULOS PARA QUE QUEDE CENTRADO*/
+  display: flex;
+  /*Centrar los "hijos" (contendedores hijos) de manera horizontal*/
+  justify-content: center;
+  /*Centrar los contendedores hijos de manera vertical*/
+  align-content: center;
+  /*Margen exterior entre los otros objetos HTML (arriba-abajo derecha-izquierda)*/
+  margin: 120px 0; 
+}
+
+header .texto-perfil .texto {
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  border-radius: 3px;
+  /*Tranformamos a block*/
+  display: inline-block;
+  /*Centro el texto*/
+  text-align: center;
+  /*Margen interno entre el texto y el contenedor*/
+  padding: 20px 60px; 
+}
+
+header .texto-perfil .texto h1, 
+header .texto-perfil .texto h2 {
+  color: #fff;
+  /*Tipo de letra del Open Sans*/
+  font-weight: 335;
+  /*Le quieto el margen que traen por dejecto los hx*/
+  margin: 0; 
+}
+
+header .texto-perfil .texto .nombre {
+  margin-bottom: 12px;
+  font-size: 40px;
+  /*Interlineado*/
+  line-height: 50px; 
+}
+
+header .texto-perfil .texto .profesion {
+  font-size: 22px;
+  line-height: 25px; 
+}
+
+/* ----- ----- MAIN ----- ----- */
+
+.main .contenedor {
+  /*Sobreescribo la propiedad de hidden general*/
+  overflow: visible;
+}
+
+.main .informacion-perfil {
+  /*Tambien afecta a la imagen porque es de tipo linea*/
+  /*inline: abarcan el espacio necesario*/
+  text-align: center; 
+}
+
+/*Contenedor de la imagen*/
+.main .informacion-perfil .foto {
+  /*Negativo para que se superponga con el header*/
+  margin-top: -40px; 
+}
+  
+/*La imagen en si*/
+.main .informacion-perfil .foto img {
+  border-radius: 50%;
+  border: 5px solid rgba(255, 255, 255, 0.2); 
+}
+
+.main .informacion-perfil .texto {
+  color: #5a5a5a;
+  /*Tipo de fuente de Open Sans*/
+  font-weight: 600;
+  font-size: 1.1em;
+  /*Interlineado*/
+  line-height: 30px;
+  width: 100%;
+  /*El auto es para centrar el contenedor*/
+  margin: 40px auto 50px auto; 
+}
+
+.main .informacion-perfil .texto .titulo {
+  font-size: 34px;
+  /*Margen exterior hacia abajo con los otros elementos HTML*/
+  margin-bottom: 40px;
+  /*Interlineado*/
+  line-height: 34px;
+  /*Tipo de fuente de Open Sans*/
+  font-weight: 350;
+  color: #dd820d;
+  text-align: center; 
+}
+
+
+/* ------ ---- TRABAJOS ---------*/
+
+.main .trabajos {
+  background: #f2f2f2;
+  padding: 40px 0; 
+}
+
+.main .trabajos .contenedor {
+  overflow: hidden; 
+}
+
+.main .trabajos .segunda-seccion {
+  margin-top: 30px;
+}
+
+/*Mismas propiedades que el titulo de acerca de*/
+.main .trabajos .titulo {
+  font-size: 34px;
+  line-height: 34px;
+  margin-bottom: 60px;
+  /*Tipo de fuente de Open Sans*/
+  font-weight: 350;
+  color: #323068;
+  text-align: center; 
+}
+
+.main .trabajos .contenedor-cada-trabajos {
+  /*Habilito flexbox, donde ahora los elementos hijos son "flexibles(especie de float)"*/
+  display: flex;
+  flex-direction: rows;
+  /*Para que se respete las propiedades de los hijos si no entran en la caja padre en lo ancho o alto y se va hacia abajo*/
+  flex-wrap: wrap;
+  /*Posiciona los hijos de manera que dejen un espacio iguales en medio de manera DINAMICA(se ajusta si la pantalla de achica hasta cierto punto), 
+    en este caso como hay dos solo y tiene column se pone una arriba de todo y otro abajo de todo*/
+  justify-content: space-between; 
+}
+
+.main .trabajos .contenedor-cada-trabajos .trabajo {
+  /*23% para que entre solo 4 trabajos por fila*/
+  width: 23%;
+  margin-bottom: 40px; 
+}
+
+.main .trabajos .contenedor-cada-trabajos .trabajo .imagen-trabajo {
+  width: 100%;
+  margin-bottom: 10px; 
+}
+
+.main .trabajos .contenedor-cada-trabajos .trabajo .imagen-trabajo img {
+  /*Quitar el espacio vertical en cada imagen que viene por defecto*/
+  vertical-align: top;
+  width: 100%;
+  border-radius: 3px; 
+}
+
+.main .trabajos .contenedor-cada-trabajos .trabajo .descripcion {
+  text-align: center; 
+}
+
+.main .trabajos .contenedor-cada-trabajos .trabajo .descripcion .nombre {
+  /*Tipo de fuente de Open Sans*/
+  font-weight: 750;
+  color: #3283ce;
+  margin-bottom: 10px; 
+}
+
+.main .trabajos .contenedor-cada-trabajos .trabajo .descripcion .detalle {
+  font-size: 16px;
+  color: #4e4e4e;
+  /*Interlineado*/
+  line-height: 25px; 
+}
+
+.main .trabajos .contenedor-cada-trabajos .trabajo .descripcion .detalle-adicional {
+  font-size: 15px;
+  color: #4e4e4e;
+  /*Interlineado*/
+  line-height: 20px; 
+  margin-top: 10px;
+}
+
+/* Estilos para los botones de los repositorios */
+.main .trabajos .contenedor-cada-trabajos .trabajo .repositorios {
+  margin-top: 15px;
+  text-align: center; /* Centrar los botones */
+}
+
+.main .trabajos .contenedor-cada-trabajos .trabajo .btn-repo {
+  background-color: #3283ce; /* Color de fondo del botón */
+  color: white; /* Color del texto */
+  font-size: 14px;
+  padding: 10px 20px; /* Espaciado interno */
+  border-radius: 5px; /* Bordes redondeados */
+  text-decoration: none; /* Quitar subrayado */
+  font-weight: bold; /* Texto en negrita */
+  display: inline-block;
+  margin: 5px; /* Espacio entre los botones */
+  transition: background-color 0.3s ease; /* Animación en el hover */
+}
+
+.main .trabajos .contenedor-cada-trabajos .trabajo .btn-repo:hover {
+  background-color: #0056b3; /* Cambio de color en hover */
+}
+
+
+/* Quitar subrayado de los enlaces en las imágenes y los nombres */
+.main .trabajos .contenedor-cada-trabajos .trabajo .descripcion a {
+  text-decoration: none;
+}
+
+.main .trabajos .contenedor-cada-trabajos .trabajo .descripcion a:hover {
+  text-decoration: underline; /* Subrayado al pasar el mouse */
+}
+
+.main .trabajos .contenedor-cada-trabajos .trabajo .imagen-trabajo a img {
+  transition: transform 0.3s ease; /* Animación en hover */
+}
+
+.main .trabajos .contenedor-cada-trabajos .trabajo .imagen-trabajo a:hover img {
+  transform: scale(1.05); /* Efecto de zoom al pasar el ratón */
+}
+
+
+/* ----- ----- FOOTER ----- ----- */
+footer .redes-sociales {
+  background: #1e2b38;
+  padding: 60px 0; 
+}
+
+footer .redes-sociales .contenedor {
+  /*Habilito flexbox, donde ahora los elementos hijos son "flexibles(especie de float)"*/
+  display: flex;
+  /*Centrar los contendedores hijos de manera horizontal*/
+  justify-content: center; 
+}
+
+footer .redes-sociales .contenedor a {
+  color: #fff;
+  text-align: center;
+  width: 100px;
+  /*Los iconos son una FUENTE, cambio su tamaño con font-size*/
+  font-size: 30px;
+  /*Margen interno entre icono y el recuadro*/
+  padding: 15px 0;
+  /*Transformo los imput de tipo inline a block(100%) para que este uno abajo del otro*/
+  /*Pero con flexbox lo arreglo*/
+  display: block;
+  /*Margen exterior con los otros enlaces*/
+  margin: 0 20px;
+  border-radius: 3px; 
+}
+
+footer .redes-sociales .contenedor .facebook:hover {
+  background: #3b5998; }
+
+footer .redes-sociales .contenedor .github:hover {
+  background: #666666; }
+
+footer .redes-sociales .contenedor .linkedin:hover {
+  background: #0077B5; }
+
+
+/* ----- ----- MEDIA QUERIES ----- ----- */
+@media screen and (max-width: 800px) {
+  .main .trabajos .contenedor-cada-trabajos .trabajo {
+    /*Con esto entran dos imagenes y los 8% queda como espacio en el medio */
+    width: 46%; 
+  } 
+    /*header .menu {
+    text-align: center; } */
+  }
+@media screen and (max-width: 500px) {
+
+  header .texto-perfil .texto .nombre {
+    /*Cambiamos el tamaño de la fuente a menos y esto afecta a su contenedor*/
+    font-size: 35px; 
+  }
+
+  header .texto-perfil .texto .profesion {
+    /*Cambiamos el tamaño de la fuente a menos y esto afecta a su contenedor*/
+    font-size: 18px; 
+  }
+
+  /*footer .redes-sociales .contenedor {
+   /*Para que se respete las propiedades de los hijos si no entran en la caja padre en lo ancho o alto*/
+  /*Para que se posiciones uno debajo de otro
+    flex-wrap: wrap; 
+  }*/
+
+  /*footer .redes-sociales .contenedor a {
+      padding: 20px; 
+  } */
+    
+}
+
+/*# sourceMappingURL=estilos.css.map */

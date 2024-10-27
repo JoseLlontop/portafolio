@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <!--Fuente de letras de Google Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+      rel="stylesheet"
+    />
+    <meta charset="UTF-8" />
+    <!--Asegurar que los estilos sean universales a los dispositivos-->
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/normalize.css">
+    <!--Sirve para adaptar la pagina al tamaño de la pantalla del dispositivo-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/estilos.css">
+    <link rel="shortcut icon" href="img/icons.png" type="image/x-icon" />
+    <title>Portafolio de Jose Llontop</title>
+  </head>
+
+  <body>
+
+    <!--No lo colocamos dentro de un contendor-pagina ya que queremos que abarque un 100% y que este centrado-->
+    <!--ENCABEZADO DE LA PAGINA-->
+    <header>
+      <div class="contenedor">
+
+        <nav class="menu">  
+          <!--Menu de navegacion (en flexbox no es necesario usar listas)-->
+          <!--Enlaces-->
+          <a href="index.html">Ir a Portafolio de Proyectos</a>
+          </nav>  
+
+        <div class="texto-perfil">
+        <div class="texto">
+            <h1 class="nombre">Jose Llontop</h1>
+            <h2 class="profesion">Desarrollador Full Stack</h2>
+        </div>
+        </div>
+        
+      </div>
+    </header>
+
+
+    <!--SECCION O CONTENIDO PRINCIPAL-->
+    <seccion class="main">
+
+        <seccion class="informacion-perfil">
+            <div class="contenedor">
+
+                <div class="foto">
+                    <img src="img/foto-perfil.png" width="250" height="250" alt="Jose Llontop">
+                </div>
+  
+                <div class="texto">
+                    <h3 class="titulo">Descripción Profesional</h3>
+                    <p>Hola, soy José Llontop, estudiante de cuarto año de la carrera Ingeniería en Sistemas de la Universidad Tecnológica Nacional. Tengo experiencia en desarrollo backend utilizando Java con el framework Spring Boot, así como en frontend con HTML, CSS, JavaScript y React. Además, he desarrollado aplicaciones móviles para Android utilizando Kotlin y Jetpack Compose. 
+                      Me apasiona la tecnología y estoy entusiasmado por aplicar mis conocimientos en proyectos reales, y seguir aprendiendo de profesionales en el campo.</p>
+                </div>
+
+            </div>
+        </seccion>
+
+        <section class="trabajos">
+          <div class="contenedor">
+      
+              <h3 class="titulo">Desarrollo Web</h3>
+      
+              <div class="contenedor-cada-trabajos">
+      
+                  <div class="trabajo">
+                      <div class="imagen-trabajo">
+
+                        <a href="https://tienda-shopify.vercel.app/" target="_blank">
+                            <img src="img/trabajos/1.jpg" alt="Ecommerce">     
+                        </a>
+                          
+                      </div>
+                      <div class="descripcion">
+                          <a href="https://tienda-shopify.vercel.app/" target="_blank">
+                                <p class="nombre">Ecommerce</p>
+                          </a>
+                          <p class="detalle">Backend: Spring Boot</p>
+                          <p class="detalle">Frontend: React</p>
+                          <p class="detalle">Base de datos: MySQL</p>
+                          <p class="detalle-adicional">(Se implemento S3 de AWS)</p>
+                          <!-- Botones para los repositorios -->
+                          <div class="repositorios">
+                              <a href="https://github.com/JoseLlontop/trabajoFinal.git" class="btn-repo" target="_blank">Ver Backend</a>
+
+                              <a href="https://github.com/JoseLlontop/TiendaOnlineFront-End.git" class="btn-repo" target="_blank">Ver Frontend</a>
+                          </div>
+                      </div>
+                  </div>
+      
+                  <div class="trabajo">
+                      <div class="imagen-trabajo">
+                        <a href="https://trabajo-final-ds-front.vercel.app/" target="_blank">
+                            <img src="img/trabajos/2.jpg" alt="Funcionalidad Alta de Pago">
+                        </a>  
+                      </div>                    
+                      <div class="descripcion">
+                          <a href="https://trabajo-final-ds-front.vercel.app/" target="_blank">
+                                <p class="nombre">Funcionalidad Alta de Pago</p>
+                          </a>                          
+                          <p class="detalle">Backend: Spring Boot</p>
+                          <p class="detalle">Frontend: HTML, CSS y JavaScript</p>
+                          <p class="detalle">Base de datos: MySQL</p>
+                          <!-- Botones para los repositorios -->
+                          <div class="repositorios">
+                              <a href="https://github.com/JoseLlontop/trabajo-final-ds-back" class="btn-repo" target="_blank">Ver Backend</a>
+                              <a href="https://github.com/JoseLlontop/trabajo-final-ds-front" class="btn-repo" target="_blank">Ver Frontend</a>
+                          </div>
+                      </div>
+                  </div> 
+      
+                  <div class="trabajo">
+                      <div class="imagen-trabajo">
+                        <a href="https://josellontop.github.io/oficina-virtual/" target="_blank">
+                            <img src="img/trabajos/7.jpg" alt="Oficina Virtual">
+                        </a>                      
+                      </div>
+                      <div class="descripcion">
+                         <a href="https://josellontop.github.io/oficina-virtual/" target="_blank">
+                            <p class="nombre">Oficina Virtual</p>
+                         </a>                          
+                         <p class="detalle">Página estática con diseño en HTML y CSS, orientada a un entorno de oficina</p>
+                          <!-- Botón para el repositorio de página estática -->
+                          <div class="repositorios">
+                              <a href="https://github.com/JoseLlontop/oficina-virtual" class="btn-repo" target="_blank">Ver Repositorio</a>
+                          </div>
+                      </div>
+                  </div>  
+      
+                  <div class="trabajo">
+                      <div class="imagen-trabajo">
+                        <a href="https://josellontop.github.io/blog-personal/" target="_blank">
+                            <img src="img/trabajos/4.jpg" alt="Blog Personal">
+                        </a>                      
+                    </div>
+                      <div class="descripcion">
+                         <a href="https://josellontop.github.io/blog-personal/" target="_blank">
+                            <p class="nombre">Blog Personal</p>
+                         </a>                          
+                        <p class="detalle">Página estática de blog, diseñada con HTML y CSS</p>
+                          <!-- Botón para el repositorio de página estática -->
+                          <div class="repositorios">
+                              <a href="https://github.com/JoseLlontop/blog-personal" class="btn-repo" target="_blank">Ver Repositorio</a>
+                          </div>
+                      </div>
+                  </div>
+                        
+              </div>
+          </div>
+
+
+          <div class="contenedor">
+      
+            <h3 class="titulo segunda-seccion">Desarrollo Móvil</h3>
+    
+            <div class="contenedor-cada-trabajos">
+
+                <div class="trabajo">
+                  <div class="imagen-trabajo">
+                    <a href="./app3.html" target="_blank">
+                        <img src="img/trabajos/imagenApp1.jpg" alt="Blog Personal">
+                    </a>                      
+                </div>
+                  <div class="descripcion">
+                    <a href="./app3.html" target="_blank">
+                        <p class="nombre">Aplicación de Reconocimiento de Sonidos</p>
+                    </a> 
+                        <p class="detalle">Frontend: Kotlin</p>                         
+                        <p class="detalle">Backend: Python</p>
+                        <p class="detalle">Base de datos: MySQL</p>
+                      <!-- Botón para el repositorio de página estática -->
+                      <div class="repositorios">
+                        <a href="https://github.com/JoseLlontop/backend-app-moviles" class="btn-repo" target="_blank">Ver Backend</a>
+                        <a href="https://github.com/JoseLlontop/AppTrabajoFinal" class="btn-repo" target="_blank">Ver Frontend</a>
+                    </div>
+                  </div>
+              </div>
+    
+                <div class="trabajo">
+                    <div class="imagen-trabajo">
+                      <a href="./app1.html" target="_blank">
+                          <img src="img/trabajos/imagenApp4.jpg" alt="Aplicación de Gestión de Usuarios en Android">
+                      </a>                      
+                    </div>
+                    <div class="descripcion">
+                       <a href="./app1.html" target="_blank">
+                          <p class="nombre">Aplicación de Gestión de Usuarios en Android</p>
+                       </a>                          
+                       <p class="detalle">Esta aplicación móvil fue desarrollada utilizando Kotlin y XML para el diseño de interfaces.</p>
+                        <!-- Botón para el repositorio de página estática -->
+                        <div class="repositorios">
+                            <a href="https://github.com/JoseLlontop/AppMovilKotlin" class="btn-repo" target="_blank">Ver Repositorio</a>
+                        </div>
+                    </div>
+                </div>  
+    
+                <div class="trabajo">
+                    <div class="imagen-trabajo">
+                      <a href="./app2.html" target="_blank">
+                          <img src="img/trabajos/imagenApp3.jpg" alt="Blog Personal">
+                      </a>                      
+                  </div>
+                    <div class="descripcion">
+                       <a href="https://josellontop.github.io/blog-personal/" target="_blank">
+                          <p class="nombre">Aplicación de Juego de Adivinanza</p>
+                       </a>                          
+                      <p class="detalle">Esta aplicación móvil fue desarrollada utilizando Kotlin y Jetpack Compose para el diseño de interfaces.</p>
+                        <!-- Botón para el repositorio de página estática -->
+                        <div class="repositorios">
+                            <a href="https://github.com/JoseLlontop/GameCapitalsKotlin" class="btn-repo" target="_blank">Ver Repositorio</a>
+                        </div>
+                    </div>
+                </div>
+                      
+            </div>
+        </div>
+
+      </section>
+      
+      
+    </seccion>
+
+    <!--PIE DE PAGINA-->
+    <footer>
+          <section class="redes-sociales">
+            <div class="contenedor">
+              <a class="linkedin" href="https://www.linkedin.com/in/jose-llontop/" target="_blank"><i class="fa fa-linkedin"></i></a>
+              <a class="github" href="https://github.com/JoseLlontop" target="_blank"><i class="fa fa-github"></i></a>
+            </div>
+          </section>
+    </footer>
+
+  </body>
+</html>
